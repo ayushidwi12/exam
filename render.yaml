@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: exam-flask-app
+    env: python
+    buildCommand: ""
+    startCommand: python webapp/app.py
+    envVars:
+      - key: FLASK_ENV
+        value: production
