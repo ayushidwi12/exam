@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Evaluation Results</title>
+</head>
+<body>
+    <h1>Student Answer Evaluation</h1>
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tr>
+            <th>File</th>
+            <th>Question ID</th>
+            <th>Similarity Score</th>
+            <th>Grade</th>
+        </tr>
+        {% for row in result %}
+        <tr>
+            <td>{{ row.file }}</td>
+            <td>{{ row.question_id }}</td>
+            <td>{{ row.similarity_score }}%</td>
+            <td>{{ row.grade }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
